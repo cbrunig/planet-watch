@@ -1,31 +1,35 @@
 function PlanetTable  () {
     return (
         <table>
-                    <tr>
-                        <th>Planet</th>
-                        <th>Magnitude</th>
-                        <th>RA</th>
-                        <th>Declination</th>
-                        <th>Altitude</th>
-                        <th>Direction</th>
-                    </tr>
-                    <tr>
-                        <th>Jupiter</th>
-                        <th>-1.9</th>
-                        <th>05h 40m 37s</th>
-                        <th>+23° 09' 44"</th>
-                        <th>63.0°</th>
-                        <th>South-West</th>
-                    </tr>
-                    <tr>
-                        <th>Mars</th>
-                        <th>1.1</th>
-                        <th>09h 12m 55s</th>
-                        <th>+17° 48' 58"</th>
-                        <th>58.7°</th>
-                        <th>South-East</th>
-                    </tr>
-                </table>
+            <thead>
+                <tr>
+                    <th>Planet</th>
+                    <th>Magnitude</th>
+                    <th>RA</th>
+                    <th>Declination</th>
+                    <th>Altitude</th>
+                    <th>Direction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jupiter</td>
+                    <td>-1.9</td>
+                    <td>05h 40m 37s</td>
+                    <td>+23° 09' 44"</td>
+                    <td>63.0°</td>
+                    <td>South-West</td>
+                </tr>
+                <tr>
+                    <td>Mars</td>
+                    <td>1.1</td>
+                    <td>09h 12m 55s</td>
+                    <td>+17° 48' 58"</td>
+                    <td>58.7°</td>
+                    <td>South-East</td>
+                </tr>
+            </tbody>
+        </table>
     );
 }
 
