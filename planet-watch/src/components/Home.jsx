@@ -1,6 +1,27 @@
-import { Link } from "react-router";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home () {
+    const [latitude, setLatitude] = useState('');
+    const [longitude, setLongitude] = useState('');
+    
+    const isValid = isValidLatLon(latitude, longitude);
+
+    function isValidLatLon(lat, lon) {
+        const latNum = parseFloat(lat);
+        const lonNum = parseFloat(lon);
+
+        return (
+            !isNaN(latNum) &&
+            !isNaN(lonNum) &&
+            latNum >= -90 &&
+            latNum <= 90 &&
+            lonNum >= -180 &&
+            lonNum <= 180
+        );
+    }
+
+
     return (
         <div>
             <header>
@@ -8,20 +29,49 @@ function Home () {
             </header>
             <main>
                 <section>
-                    <label for="latitude">
-                        Latitude:  
-                        <input type='text' id='latitude' name="latitude"></input>
+                    <label htmlFor="latitude">
+                        Latitude: <input 
+                            type='text' 
+                            id='latitude' 
+                            name="latitude" 
+                            value={latitude} 
+                            onChange={e => setLatitude(e.target.value)} />
                     </label>
                 </section>
+                
                 <section>
-                    <label for="longitude">
-                        Longitude:  
-                        <input type='text' id='longitude' name="longitude"></input>
+                    <label htmlFor="longitude">
+                        Longitude: <input 
+                            type='text' 
+                            id='longitude' 
+                            name="longitude" 
+                            value={longitude} 
+                            onChange={e => setLongitude(e.target.value)} />
                     </label>
                 </section>
+
                 <br />
-                <Link to="/location/:cityName">
-                    <button type="button">Let's go!</button>
+
+                {!isValid && (latitude || longitude) && (
+                    <p style={{ color: 'red' }}>
+                        Please enter valid coordinates. Latitude must be between -90 and 90, longitude between -180 and 180.
+                    </p>
+                )}
+
+                <br />
+                
+                {isValid ? (
+                    <Link to={`/${latitude}/${longitude}`}>
+                        <button type="button">Let's go!</button>
+                    </Link>
+                    ) : (
+                        <button type="button" disabled>Let's go!</button>
+                )}
+
+                <br /><br />
+
+                <Link to="https://www.latlong.net/">
+                    <button type="button">Need help finding coordinates?</button>
                 </Link>
             </main>
         </div>

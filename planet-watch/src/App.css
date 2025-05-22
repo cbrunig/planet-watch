@@ -29,12 +29,6 @@ h1 {
   color: #58a6ff;
 }
 
-h2 {
-  font-size: 1.5rem;
-  color: #79c0ff;
-  margin-top: 1rem;
-}
-
 /* Section styles */
 section {
   background-color: #161b22;
@@ -151,6 +145,7 @@ input[type="text"], textarea {
   padding: 8px 12px;
   font-size: 1rem;
   transition: border-color 0.2s;
+  justify-content: space-around;
 }
 
 input[type="text"]:focus, textarea:focus {
