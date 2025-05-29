@@ -1,8 +1,9 @@
+/* Global styles */
 * {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
   box-sizing: border-box;
+  padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 1500px;
 }
 
 body {
@@ -10,19 +11,14 @@ body {
   background-color: #0d1117;
   color: #e6edf3;
   line-height: 1.6;
-  padding: 2rem;
-}
-
-.info-page section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
 }
 
 /* Header */
 header {
   text-align: center;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -30,6 +26,7 @@ h1 {
   color: #58a6ff;
 }
 
+/* Section styles */
 section {
   background-color: #161b22;
   border-radius: 12px;
@@ -42,11 +39,39 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* Seeing conditions */
+/* Info Page specific layout */
+.info-page {
+  padding: 0 1rem;
+}
+
+.info-page section {
+  margin: 0 0 2rem 0;
+}
+
+
+.horizontal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .horizontal-container {
+    flex-direction: column;
+  }
+
+  .horizontal-container > section {
+    width: 100%;
+  }
+}
+
+/* Conditions layout */
 .conditions {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .condition-box {
@@ -54,8 +79,8 @@ section h2 {
   border: 1px solid #30363d;
   border-radius: 10px;
   padding: 1rem;
-  margin: 0.5rem;
-  flex: 1 1 200px;
+  flex: 1 1 100%;
+  min-width: 250px;
   text-align: center;
 }
 
@@ -66,14 +91,29 @@ section h2 {
   color: #a5d6ff;
 }
 
+/* Forecast cards */
+.forecast-cards {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.forecast-box {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 2rem;
   background-color: #161b22;
   border: 1px solid #30363d;
-  border-radius: 8px;
-  overflow: hidden;
   color: #e6edf3;
 }
 
@@ -97,21 +137,7 @@ tbody tr:nth-child(even) td {
   background-color: #1c2128;
 }
 
-.forecast-cards {
-  display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-}
-
-.forecast-box {
-  background-color: #21262d;
-  border: 1px solid #30363d;
-  border-radius: 8px;
-  padding: 1rem;
-  min-width: 150px;
-  text-align: center;
-}
-
+/* Buttons */
 button {
   background-color: #21262d;
   color: #79c0ff;
@@ -137,6 +163,7 @@ button:focus {
   box-shadow: 0 0 0 2px rgba(121, 192, 255, 0.6);
 }
 
+/* Form fields */
 input[type="text"], textarea {
   background-color: #23272e;
   color: #e0e0e0;
@@ -145,7 +172,7 @@ input[type="text"], textarea {
   padding: 8px 12px;
   font-size: 1rem;
   transition: border-color 0.2s;
-  justify-content: space-around;
+  width: 100%;
 }
 
 input[type="text"]:focus, textarea:focus {
@@ -154,21 +181,16 @@ input[type="text"]:focus, textarea:focus {
   box-shadow: 0 0 0 2px #1b2836;
 }
 
-.AboutPage {
-  padding: '2rem'; 
-  width: '800px'; 
-  margin: '0 auto';
-  justify-content: space-around;
-}
-
+/* Lists and other elements */
 .indented-list {
   padding-left: 1.5rem;
   margin-top: 0.5rem;
 }
 
-.back {
+.back, .button-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 footer {
@@ -179,8 +201,9 @@ footer {
   color: #999;
 }
 
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

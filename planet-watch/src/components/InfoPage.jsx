@@ -24,22 +24,26 @@ function InfoPage () {
                 <section>
                     <BackButton />
                 </section>
-                <section>
-                    <img src={placeholder} 
-                    alt="Placeholder for star map or planet chart" 
-                    height={500} 
-                    width={500}
-                    />
-                </section>
-                <section>
-                    <PlanetTable latitude={latitude} longitude={longitude} elevation={300} />
-                </section>
-                <section>
-                    <Seeing />
-                </section>
-                <section>
-                    <SeeingForecast />
-                </section>
+                <div className='horizontal-container'>
+                    <section>
+                        <img src={placeholder} 
+                        alt="Placeholder for star map or planet chart" 
+                        height={500} 
+                        width={500}
+                        />
+                    </section>
+                    <section>
+                        <PlanetTable latitude={latitude} longitude={longitude} elevation={300} />
+                    </section>
+                </div>
+                <div className='horizontal-container'>
+                    <section>
+                        <Seeing />
+                    </section>
+                    <section>
+                        <SeeingForecast />
+                    </section>
+                </div>
             </main>
         </div>
     );
