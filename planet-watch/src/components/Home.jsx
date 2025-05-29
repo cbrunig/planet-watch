@@ -73,6 +73,12 @@ function Home () {
                 <Link to="https://www.latlong.net/">
                     <button type="button">Need help finding coordinates?</button>
                 </Link>
+
+                <br /><br />
+                
+                <Link to="/about">
+                    <button type="button">About Planet Watch</button>
+                </Link>
             </main>
         </div>
     );

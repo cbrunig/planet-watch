@@ -1,6 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
@@ -152,4 +153,21 @@ input[type="text"]:focus, textarea:focus {
   border-color: #539bf5;
   outline: none;
   box-shadow: 0 0 0 2px #1b2836;
+}
+
+.AboutPage {
+  padding: '2rem'; 
+  width: '800px'; 
+  margin: '0 auto';
+  justify-content: space-around;
+}
+
+.indented-list {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
 }

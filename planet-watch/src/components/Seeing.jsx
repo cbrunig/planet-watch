@@ -11,10 +11,6 @@ function Seeing () {
                     <span>3/5</span>
                     Transparency
                 </div>
-                    <div className="condition-box">
-                    <span>2.1 arcsec</span>
-                    Atmospheric Seeing
-                </div>
                 <div className="condition-box">
                     <span>10%</span>
                     Cloud Cover

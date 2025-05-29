@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 function BackButton () {
     return (
-        <div>
+        <div className="back">
             <Link to='/'>
-                <button type="button">Change Location</button>
+                <button type="button">Back</button>
             </Link>
         </div>
     );
