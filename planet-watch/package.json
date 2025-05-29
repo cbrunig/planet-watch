@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "homepage": "http://cbrunig/github/planet-watch",
+    "homepage": "https://cbrunig.github.io/planet-watch",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
