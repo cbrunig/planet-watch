@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './components/home'
 import InfoPage from './components/InfoPage'
@@ -7,7 +7,7 @@ import AboutPage from './components/AboutPage'
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route
             path="/"
@@ -25,7 +25,7 @@ function App() {
           <footer className='footer'>
               &copy; {new Date().getFullYear()} Planet Watch. Built with React.
           </footer>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
