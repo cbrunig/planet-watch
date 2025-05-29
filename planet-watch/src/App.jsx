@@ -22,6 +22,9 @@ function App() {
             path="*"
             element={<p>Page not found.</p>} />
         </Routes>
+          <footer className='footer'>
+              &copy; {new Date().getFullYear()} Planet Watch. Built with React.
+          </footer>
       </BrowserRouter>
     </>
   )

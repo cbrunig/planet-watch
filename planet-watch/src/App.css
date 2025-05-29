@@ -30,7 +30,6 @@ h1 {
   color: #58a6ff;
 }
 
-/* Section styles */
 section {
   background-color: #161b22;
   border-radius: 12px;
@@ -118,7 +117,7 @@ button {
   color: #79c0ff;
   border: 1px solid #30363d;
   border-radius: 6px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -170,4 +169,18 @@ input[type="text"]:focus, textarea:focus {
 .back {
   display: flex;
   justify-content: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }

@@ -58,27 +58,27 @@ function Home () {
                     </p>
                 )}
 
-                <br />
+                <div className="button-wrapper">
+                    {isValid ? (
+                        <Link to={`/${latitude}/${longitude}`}>
+                            <button type="button">Let's go!</button>
+                        </Link>
+                        ) : (
+                            <button type="button" disabled>Let's go!</button>
+                    )}
+                </div>
                 
-                {isValid ? (
-                    <Link to={`/${latitude}/${longitude}`}>
-                        <button type="button">Let's go!</button>
+                <div className="button-wrapper">
+                    <Link to="https://www.latlong.net/">
+                        <button type="button">Need help finding coordinates?</button>
                     </Link>
-                    ) : (
-                        <button type="button" disabled>Let's go!</button>
-                )}
-
-                <br /><br />
-
-                <Link to="https://www.latlong.net/">
-                    <button type="button">Need help finding coordinates?</button>
-                </Link>
-
-                <br /><br />
-                
-                <Link to="/about">
-                    <button type="button">About Planet Watch</button>
-                </Link>
+                </div>
+            
+                <div className="button-wrapper">
+                    <Link to="/about">
+                        <button type="button">About Planet Watch</button>
+                    </Link>
+                </div>
             </main>
         </div>
     );
