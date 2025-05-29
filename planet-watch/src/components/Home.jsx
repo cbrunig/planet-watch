@@ -69,7 +69,7 @@ function Home () {
                 </div>
                 
                 <div className="button-wrapper">
-                    <Link to="https://www.latlong.net/">
+                    <Link to="https://www.latlong.net/" target="_blank">
                         <button type="button">Need help finding coordinates?</button>
                     </Link>
                 </div>

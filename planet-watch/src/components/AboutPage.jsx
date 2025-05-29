@@ -26,7 +26,7 @@ function AboutPage() {
             <section>
                 <p className="back">
                     <BackButton />
-                </p>
+                </p> 
             </section>
             <footer style={{ marginTop: '2rem' }}>
                 <p>Built with ❤️ by an astronomy enthusiast. </p>
