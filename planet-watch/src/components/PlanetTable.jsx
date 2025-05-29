@@ -26,11 +26,8 @@ function PlanetTable({ latitude, longitude, elevation = 0 }) {
 
   useEffect(() => {
     if (!isValid) {
-        console.log("Invalid coordinates");
         return;
     }
-
-    console.log("Fetching planet data for", latNum, lonNum);
 
     const observer = new Astronomy.Observer(latNum, lonNum, elevation);
     const now = new Date();
@@ -48,7 +45,6 @@ function PlanetTable({ latitude, longitude, elevation = 0 }) {
           visible: hor.altitude > 0
         };
       } catch (e) {
-        console.log(`Error processing ${body}:`, e);
         return {
           name: Astronomy.Body[body],
           ra: "-",
@@ -60,7 +56,6 @@ function PlanetTable({ latitude, longitude, elevation = 0 }) {
       }
     });
 
-    console.log("Generated planet data:", data);
     setPlanetData(data);
   }, [latNum, lonNum, elevation, isValid]);
 
